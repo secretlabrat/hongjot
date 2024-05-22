@@ -34,6 +34,8 @@ jobs:
   gitops-dev-versioning:
         environment: dev
         runs-on: ubuntu-latest
+        permissions:
+          contents: write
         needs: build-and-push-image
         name: GitOps Dev Versioning
         steps:
