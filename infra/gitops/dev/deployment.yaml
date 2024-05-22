@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: KBTG-summer-workshop-hongjot
-          image: ghcr.io/secretlabrat/hongjot:c803f3a6e694cdf09669f8bab5a632a1571b9ffa
+          image: ghcr.io/:e1d9e3778fc45fddf2a4e436a2843472709728a9
           imagePullPolicy: Always
           env:
               -  name: SERVER_PORT
