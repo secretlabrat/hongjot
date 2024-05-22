@@ -45,8 +45,8 @@ jobs:
             - name: config git
               run: |
                 git --version
-                git config user.name "robot"
-                git config user.email "robot@email.com"
+                git config user.name "GitHub Action"
+                git config user.email "action@github.com"
             - name: change image tag to deploy dev
               run: |
                 echo "ESCAPED_REPO=$(echo "${{ github.repository }}" | sed 's/\//\\\//g')" >> $GITHUB_ENV
