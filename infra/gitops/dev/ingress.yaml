@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: kidkrub.thddns.net:3350
+  - host: kidkrub.thddns.net
     http:
       paths:
       - path: /
