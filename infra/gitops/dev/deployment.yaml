@@ -14,7 +14,7 @@ spec:
         app: api
     spec:
       containers:
-        - name: KBTG-summer-workshop-hongjot
+        - name: summer-workshop-hongjot
           image: ghcr.io/secretlabrat/hongjot:e92a7b0ef39b958a3cb9dd8a5f381f3cf74878bf
           imagePullPolicy: Always
           env:
