@@ -50,7 +50,7 @@ jobs:
             - name: change image tag to deploy dev
               run: |
                 echo "ESCAPED_REPO=$(echo "${{ github.repository }}" | sed 's/\//\\\//g')" >> $GITHUB_ENV
-                sed -i -E "s/${{ vars.REGISTRY }}\/${{ env.ESCAPED_REPO }}.*$/${{ vars.REGISTRY }}\/${{ env.ESCAPED_REPO }}:${GITHUB_SHA}/" infra/gitops/dev/deployment.yaml
+                sed -i -E "s/${{ vars.REGISTRY }}\/${ESCAPED_REPO}.*$/${{ vars.REGISTRY }}\/${ESCAPED_REPO}:${GITHUB_SHA}/" infra/gitops/dev/deployment.yaml
                 git add infra/gitops/dev/deployment.yaml
                 git commit -m "[skip actions] 🤖 change dev docker image version to ${GITHUB_SHA}"
                 git pull --rebase
