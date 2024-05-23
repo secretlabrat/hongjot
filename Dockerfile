@@ -7,7 +7,7 @@ RUN go mod tidy
 
 COPY . ./
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o app .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o app .
 
 FROM gcr.io/distroless/base-debian12
 
