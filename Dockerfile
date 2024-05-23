@@ -11,8 +11,10 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o app .
 
 FROM gcr.io/distroless/base-debian12
 
-USER nonroot
+WORKDIR /
 
 COPY --from=builder /app/app /
 
-CMD ["/app"]
+USER nonroot:nonroot
+
+ENTRYPOINT ["/app"]
