@@ -46,7 +46,7 @@ jobs:
               run: |
                 git --version
                 git config user.name "GitHub Action"
-                git config user.email "action@github.com"
+                git config user.email "root@kidkrub.me"
             - name: set up escaped repo
               run:  echo "ESCAPED_REPO=$(echo "${{ github.repository }}" | sed 's/\//\\\//g')" >> $GITHUB_ENV
             - name: change image tag to deploy dev
