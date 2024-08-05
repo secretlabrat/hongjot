@@ -3,11 +3,10 @@ kind: Ingress
 metadata:
   name: ingress-website
   namespace: hongjot-dev
-  annotations:
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   ingressClassName: nginx
   rules:
+  - host: hongjotapi.kidkrub.me
     http:
       paths:
       - path: /
